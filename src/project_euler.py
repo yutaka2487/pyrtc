@@ -6,3 +6,9 @@ def problem1(stop):
             sum += x
     return sum
 
+
+
+def problem3(num):
+    "Solved by: Katsuro"
+    from sympy import factorint
+    return max(factorint(num).keys())
