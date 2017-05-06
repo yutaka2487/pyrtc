@@ -8,7 +8,7 @@ def problem1(stop):
 
 
 def problem3(num):
-    "copy right: Katsuro"
+    "Solved by: Katsuro"
     from sympy import factorint
     return max(factorint(num).keys())
  
