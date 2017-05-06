@@ -11,4 +11,3 @@ def problem3(num):
     "Solved by: Katsuro"
     from sympy import factorint
     return max(factorint(num).keys())
- 
