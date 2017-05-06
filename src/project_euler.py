@@ -5,3 +5,10 @@ def problem1(stop):
             sum += x
     return sum
 
+
+
+def problem3(num):
+    "copy right: Katsuro"
+    from sympy import factorint
+    return max(factorint(num).keys())
+ 
