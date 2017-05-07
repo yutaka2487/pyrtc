@@ -25,8 +25,8 @@ written by daigo miyoshi
 
 # pip install xx / import xx / from ~ import xx を使用してモジュール/ライブラリを使用
 
-# 以下のサイトのproblem1~3を実装（Github上にUP）
- * http://odz.sakura.ne.jp/projecteuler/index.php?cmd=read&page=Problem%201 *
+# 以下のサイトのproblem1~4を実装（Github上にUP）
+ * http://odz.sakura.ne.jp/projecteuler/index.php?Project%20Euler *
 
 ===============================
 
