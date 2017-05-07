@@ -93,3 +93,24 @@ def problem10(stop):
         x for x in range(2, stop) if isprime(x)
     )
 
+def problem20(n):
+    """
+    https://projecteuler.net/problem=20
+    
+    n! means n × (n − 1) × ... × 3 × 2 × 1
+    For example, 10! = 10 × 9 × ... × 3 × 2 × 1 = 3628800,
+    and the sum of the digits in the number 10! is 3 + 6 + 2 + 8 + 8 + 0 + 0 = 27.
+    Find the sum of the digits in the number 100!
+
+    >>> problem20(10)
+    27
+
+    >>> problem20(100)
+    648
+
+    """
+    from sympy import factorial
+    return sum(
+        int(char) for char in str(factorial(n))
+    )
+
