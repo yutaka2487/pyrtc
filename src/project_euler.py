@@ -73,3 +73,23 @@ def problem5(to):
         for base, exp in factor.items():
             result *= base ** exp
         return result
+
+def problem10(stop):
+    """
+    https://projecteuler.net/problem=10
+    
+    The sum of the primes below 10 is 2 + 3 + 5 + 7 = 17.
+    Find the sum of all the primes below two million.
+    
+    >>> problem10(10)
+    17
+    
+    >>> problem10(2000000)
+    142913828922
+    
+    """
+    from sympy import isprime
+    return sum(
+        x for x in range(2, stop) if isprime(x)
+    )
+
