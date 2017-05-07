@@ -22,3 +22,30 @@ def problem3(num):
     "Solved by: Katsuro"
     from sympy import factorint
     return max(factorint(num).keys())
+
+def problem4(digit):
+    """
+    https://projecteuler.net/problem=4
+
+    A palindromic number reads the same both ways. 
+    The largest palindrome made from the product of two 2-digit numbers is 9009 = 91 × 99. 
+    Find the largest palindrome made from the product of two 3-digit numbers.
+    
+    >>> problem4(2)
+    9009
+    
+    >>> problem4(3)
+    906609
+    
+    """
+    start = 10**(digit-1)
+    stop = 10**digit
+    cand = []
+    for x in range(start, stop):
+        for y in range(start, stop):
+            z = x * y
+            s = str(z)
+            if s==s[::-1]:
+                cand.append(z)
+    return max(cand)
+
