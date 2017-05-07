@@ -3,71 +3,129 @@ written by daigo miyoshi
 第1回リアルテックキャンプ	
 """
 
-・anaconda
-	https://www.continuum.io/downloads
-	・python3、上層のフレームワークであるspyder,numpy,pandasなどを一括でパッケージ化したもの。インストールすることで多くのpython機能をローカルで使用可能
-	・spyderはGUIがリッチなIDEというよりは、フレームワークの一つという認識が良い？	
+===============================
 
-・python
-	・今回の学習内容
-		・型の確認,defにより関数定義,for/ifの使用
-		・ipython（one of python framework）により対話的にpythonを実行
-		・pip install xx / import xx / from ~ import xx を使用してモジュール/ライブラリを使用
-		・以下のサイトのproblem1~3を実装（Github上にUP）
-		http://odz.sakura.ne.jp/projecteuler/index.php?cmd=read&page=Problem%201
+### anaconda
 
-・spyder
-	・anacondaをインストールすることで使用可能
-	・ターミナル上で、"spyder"とすることで起動
-		・"bg"と最初に打っておくことで、"spyder &"でターミナルの背後でspyderを起動可能。bgがないと、ターミナルはストップしてしまう
-		・またはspyderを起動した後で、"control+z"->"bg"でも可能
-		・どちらにせよ、「背後にspyder,前にターミナル」のイメージ
-	・左側は.pyファイルを清書する
-	・右上は変数コンソールで変数の型/中身を確認
-	・右下はipythonコンソールでインタラクティブにコーディングを実行
+* https://www.continuum.io/downloads *
 
-・git/github
-	・リアルテックキャンプ（RTC）のpython用のGithubを作成
-	https://github.com/yutaka2487/pyrtc
-	・今回の学習コマンド
-		・"git clone"：GithubなどWeb上のソースコードを完全コピーしてローカルリポジトリに格納する 
-			ex) git clone https://github.com/yutaka2487/pyrtc.git
-		・"git branch"：現在自分のいるブランチ（枝）を確認
-		・"git checkout xx"：xxというブランチに移動する
-			ex) git checkout master
-		・"git diff"：自分がローカルリポジトリで作成した差分を確認
-		・"git add xx"：作成した差分を「未管理」状態から「ステージング」状態にする 
-			ex)git add project_eiler.py
-		・"git status"：addされている状態を確認できる
-		・"git commit -m xxxx"：addされた「ステージング」状態の差分をpushできる「コミット」状態にする（-m以降はメッセージ） 
-			ex)git commit -m "solved problem2"
-		・"git push origin xx"：リモートリポジトリのxxというブランチにコミットした差分をpushする
-			ex) git push origin miyoshi
-		・"git pull origin xx"：リモートリポジトリ-ローカルリポジトリの差分を自分のローカルリポジトリにpullする（同期するイメージ）
-			ex) git pull origin master
-		・"git log"：今いるブランチのリポジトリ履歴が見れる（control+Dでquit）
-	・今日行ったgitの使い方
-		1)"git clone ~~"にて元ソースコードをクローン
-		2)"git branch"/"git checkout xx"にてブランチを確認/変更
-		3)spyder(or vim などのエディタ)にて「差分を作成」（プログラミングするってことですね！！）
-		4)ある程度差分を作成したら"git add xx"にて適宜ステージングさせる
-		5)addしきったら、"git commit"にてコミットさせる
-		6)"git push origin xx"にて自分のブランチxxにpushする
-		7)Github上にて、push->pull requestされた差分にレビュー&masterブランチにmergeさせる
-		8)"git pull origin xx"にてxxブランチから差分をpullする
-	・ポイント
-		・ローカルリポジトリは「未管理」「ステージング」「コミット」の3段階に分けられる。「未管理」	は単に自分がコーディング編集（差分の作成）をした状態。git addにより「ステージング」することで、addされた差分はコミットする状態に昇華させられる。最後にgit commitにより、ステージング状態の差分を「コミット」状態にする
-		・ローカルリポジトリとリモートリポジトリのブランチに注意を払う。基本的に勘違いしなように、どちらのリポジトリも同様の名前を付けて管理しよう
-		・「プルリクエスト」機能はGithubサービス上の機能。従って、gitコマンドにはない。pushした差分を自分でGithub上にて皆にリクエストを送る
+# python3、上層のフレームワークであるspyder,numpy,pandasなどを一括でパッケージ化したもの。インストールすることで多くのpython機能をローカルで使用可能
+
+# spyderはGUIがリッチなIDEというよりは、フレームワークの一つという認識が良い？	
+
+===============================
+
+### python
+
+## 今回の学習内容 ##
+
+# 型の確認,defにより関数定義,for/ifの使用
+
+# ipython（one of python framework）により対話的にpythonを実行
+
+# pip install xx / import xx / from ~ import xx を使用してモジュール/ライブラリを使用
+
+# 以下のサイトのproblem1~3を実装（Github上にUP）
+ * http://odz.sakura.ne.jp/projecteuler/index.php?cmd=read&page=Problem%201 *
+
+===============================
+
+### spyder
+
+# anacondaをインストールすることで使用可能
+
+# ターミナル上で、"spyder"とすることで起動
+--  "bg"と最初に打っておくことで、"spyder &"でターミナルの背後でspyderを起動可能。bgがないと、ターミナルはストップしてしまう
+-- またはspyderを起動した後で、"control+z"->"bg"でも可能
+-- どちらにせよ、「背後にspyder,前にターミナル」のイメージ
+
+# 左側は.pyファイルを清書する
+
+# 右上は変数コンソールで変数の型/中身を確認
+
+# 右下はipythonコンソールでインタラクティブにコーディングを実行
+
+===============================
+
+### git/github
+
+# リアルテックキャンプ（RTC）のpython用のGithubを作成
+* https://github.com/yutaka2487/pyrtc *
+
+## 今回の学習コマンド　##
+
+-- "git clone"
+---- ：GithubなどWeb上のソースコードを完全コピーしてローカルリポジトリに格納する 
+---- ex) git clone https://github.com/yutaka2487/pyrtc.git
+
+-- "git branch"
+---- ：現在自分のいるブランチ（枝）を確認
+
+-- "git branch xx"
+---- ：xxというブランチを作成
+
+-- "git checkout xx"
+---- ：xxというブランチに移動する
+---- ex) git checkout master
+
+-- "git diff"
+---- ：自分がローカルリポジトリで作成した差分を確認
+
+-- "git add xx"
+---- ：作成した差分を「未管理」状態から「ステージング」状態にする 
+----  ex)git add project_eiler.py
+
+-- "git status"
+---- ：addされている状態を確認できる
+
+-- "git commit -m xxxx"
+---- ：addされた「ステージング」状態の差分をpushできる「コミット」状態にする（-m以降はメッセージ） 
+---- ex)git commit -m "solved problem2"
+
+-- "git push origin xx"
+---- ：リモートリポジトリのxxというブランチにコミットした差分をpushする
+---- ex) git push origin miyoshi
+
+-- ・"git pull origin xx"
+---- ：リモートリポジトリ-ローカルリポジトリの差分を自分のローカルリポジトリにpullする（同期するイメージ）
+---- ex) git pull origin master
+
+-- "git log"
+---- ：今いるブランチのリポジトリ履歴が見れる（control+Dでquit）
 
 
-・Comment
-	・今日の進捗としては、pythonの基本構造の理解,ipythonによるインタラクティブなpython実行,spyder環境の基本を操れるようにする,gitの基本概念&コマンドの理解,Githubの基本的操作の理解/RTCリポジトリの作成
-	・作業時間約7,8時間で、基本的なpythonファイルの作成&実行->gitを使用して共有までいけた
-	・今後のだいご個人的なやりたいことリストとしては、こんな所でしょうか？…
-		・ipython,spyderを用いてデータ分析,可視化アウトプット
-		・引数などの入力,データ分析アウトプットなんかを簡単なWebアプリとして作成
-		・git,Githubで共有,さらなるgitの学習
-	・3人という少人数は良かった。今後も3~6人程度が良いかもしれない
-	・片山さんの指導力にただただ感謝,感激,雨あられしかない。本当に開催し始めて良かったし、本で今勉強しているよりも全然理解度が違うことを実感してます。とても勝手な気持ちですが、定期的に教えてもらいたいなあと感じてます。ありがとうございました。（TE〇〇CAM〇よりも良いとの声もあり。これは金取れちゃいます…）
+# 今日行ったgitの使い方
+1. "git clone ~~"にて元ソースコードをクローン
+2. "git branch"/"git checkout xx"にてブランチを確認/変更
+3. spyder(or vim などのエディタ)にて「差分を作成」（プログラミングするってことですね！！）
+4. ある程度差分を作成したら"git add xx"にて適宜ステージングさせる
+5. addしきったら、"git commit"にてコミットさせる
+6. "git push origin xx"にて自分のブランチxxにpushする
+7. Github上にて、push->pull requestされた差分にレビュー&masterブランチにmergeさせる
+8. "git pull origin xx"にてxxブランチから差分をpullする
+
+
+# ポイント
+-- ローカルリポジトリは「未管理」「ステージング」「コミット」の3段階に分けられる。「未管理」	は単に自分がコーディング編集（差分の作成）をした状態。git addにより「ステージング」することで、addされた差分はコミットする状態に昇華させられる。最後にgit commitにより、ステージング状態の差分を「コミット」状態にする
+
+-- ローカルリポジトリとリモートリポジトリのブランチに注意を払う。基本的に勘違いしなように、どちらのリポジトリも同様の名前を付けて管理しよう
+
+-- 「プルリクエスト」機能はGithubサービス上の機能。従って、gitコマンドにはない。pushした差分を自分でGithub上にて皆にリクエストを送る
+
+===============================
+
+### Comment
+
+# 今日の進捗としては、pythonの基本構造の理解,ipythonによるインタラクティブなpython実行,spyder環境の基本を操れるようにする,gitの基本概念&コマンドの理解,Githubの基本的操作の理解/RTCリポジトリの作成
+
+# 作業時間約7,8時間で、基本的なpythonファイルの作成&実行->gitを使用して共有までいけた
+
+# 今後のだいご個人的なやりたいことリストとしては、こんな所でしょうか？…
+-- ipython,spyderを用いてデータ分析,可視化アウトプット
+-- 引数などの入力,データ分析アウトプットなんかを簡単なWebアプリとして作成
+-- git,Githubで共有,さらなるgitの学習
+
+# 3人という少人数は良かった。今後も3~6人程度が良いかもしれない
+
+# 片山さんの指導力にただただ感謝,感激,雨あられしかない。本当に開催し始めて良かったし、本で今勉強しているよりも全然理解度が違うことを実感してます。とても勝手な気持ちですが、定期的に教えてもらいたいなあと感じてます。ありがとうございました。（TE〇〇CAM〇よりも良いとの声もあり。これは金取れちゃいます…）
 
