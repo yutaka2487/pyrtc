@@ -165,3 +165,6 @@ def problem40():
         result *= int(s[10**exp])
     else:
         return result
+#%%
+def test(a,b):
+    return a + b
