@@ -168,3 +168,6 @@ def problem40():
 #%%
 def test(a,b):
     return a + b
+
+def test2(c, d):
+	return c * d
